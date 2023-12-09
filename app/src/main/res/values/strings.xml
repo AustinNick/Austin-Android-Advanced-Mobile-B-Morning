@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Austin_AndroidAdvance</string>
+    <string name="title_film">Title film</string>
+    <string name="genre_film">Genre film</string>
+</resources>
