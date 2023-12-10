@@ -1,5 +1,6 @@
 package com.example.austin_androidadvance.views.home.adapter
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
@@ -24,12 +25,15 @@ class HomeAdapter : ListAdapter<ResultsItem, HomeAdapter.HomeViewHolder>(DIFF_UT
     inner class HomeViewHolder(private val binding: CardFilmBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(film: ResultsItem) {
             val categoryNames = mapGenre(film.genreIds)
+            val rating = film.voteAverage
 
             binding.apply {
-                film.posterPath?.let { imgPoster.showImage(itemView.context, it) }
+                film.posterPath?.let { imgPoster.showImage(itemView.context, "https://image.tmdb.org/t/p/w500/$it") }
                 tvTitle.text = film.title
                 tvGenre.text = categoryNames
+                tvRating.text = String.format("%.1f", rating)
             }
+            Log.d("Film Adapter", "bind: $film")
         }
     }
 

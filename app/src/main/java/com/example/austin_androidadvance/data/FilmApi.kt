@@ -6,6 +6,9 @@ import retrofit2.Call
 import retrofit2.http.GET
 
 interface FilmApi {
+    @GET("movie/now_playing")
+    fun getFilmsNowPlaying(): Call<FilmResponse>
+
     @GET("movie/popular")
-    fun getFilms(): Call<FilmResponse>
+    fun getFilmsPopular(): Call<FilmResponse>
 }

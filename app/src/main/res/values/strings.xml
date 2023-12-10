@@ -2,4 +2,6 @@
     <string name="app_name">Austin_AndroidAdvance</string>
     <string name="title_film">Title film</string>
     <string name="genre_film">Genre film</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
